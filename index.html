@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>InterviewPilot AI</title>
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="style.css">
+
+<link rel="manifest"
+href="manifest.json">
+
+<meta name="theme-color"
+content="#6366F1">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- ===========================
+NAVBAR
+=========================== -->
+
+<nav>
+
+<div class="logo">
+
+🚀 InterviewPilot AI
+
+</div>
+
+<ul>
+
+<li><a href="#home">Home</a></li>
+
+<li><a href="#interview">Interview</a></li>
+
+<li><a href="#companies">Companies</a></li>
+
+<li><a href="#roadmap">Roadmap</a></li>
+
+</ul>
+
+<button
+onclick="toggleTheme()">
+
+🌙
+
+</button>
+
+</nav>
+
+<!-- ===========================
+HERO
+=========================== -->
+
+<section
+class="hero"
+id="home">
+
+<div>
+
+<h1>
+
+Ace Every
+
+<span>
+
+Interview
+
+</span>
+
+with AI
+
+</h1>
+
+<p>
+
+Prepare for HR, Technical and Aptitude interviews using one beautiful platform.
+
+Track your progress, improve your confidence and become placement ready.
+
+</p>
+
+<button
+class="btn"
+onclick="document.getElementById('interview').scrollIntoView({behavior:'smooth'})">
+
+Start Preparation
+
+</button>
+
+<button
+id="installBtn"
+style="display:none;margin-left:12px;">
+
+📲 Install App
+
+</button>
+
+</div>
+
+<div>
+
+<img
+src="assets/logo.png"
+alt="Interview AI">
+
+</div>
+
+</section>
+
+<!-- ===========================
+INTERVIEW FORM
+=========================== -->
+
+<section
+id="interview">
+
+<div class="card">
+
+<h2>
+
+🎯 Interview Profile
+
+</h2>
+
+<form
+id="interviewForm">
+
+<input
+id="fullName"
+placeholder="Full Name"
+required>
+
+<select
+id="role"
+required>
+
+<option value="">
+
+Select Role
+
+</option>
+
+</select>
+
+<select
+id="company"
+required>
+
+<option value="">
+
+Dream Company
+
+</option>
+
+</select>
+
+<select
+id="level"
+required>
+
+<option value="">
+
+Experience Level
+
+</option>
+
+</select>
+
+<div class="button-group">
+
+<button
+type="submit">
+
+Analyze Interview Readiness
+
+</button>
+
+<button
+type="button"
+onclick="resetForm()">
+
+Reset
+
+</button>
+
+<button
+type="button"
+onclick="downloadReport()">
+
+Download Report
+
+</button>
+
+</div>
+
+</form>
+
+</div>
+
+</section>
+
+<!-- ===========================
+RESULTS
+=========================== -->
+
+<section>
+
+<div
+id="scoreCard"
+class="card">
+
+</div>
+
+<div
+id="badgeCard">
+
+</div>
+
+</section>
+<!-- ===========================
+HR QUESTIONS
+=========================== -->
+
+<section>
+
+<h2 class="section-title">
+
+💼 HR Interview Questions
+
+</h2>
+
+<div
+id="hrContainer"
+class="grid">
+
+</div>
+
+</section>
+
+<!-- ===========================
+TECHNICAL QUESTIONS
+=========================== -->
+
+<section>
+
+<h2 class="section-title">
+
+💻 Technical Interview Questions
+
+</h2>
+
+<div
+id="technicalContainer"
+class="grid">
+
+</div>
+
+</section>
+
+<!-- ===========================
+APTITUDE
+=========================== -->
+
+<section>
+
+<h2 class="section-title">
+
+🧠 Aptitude Practice
+
+</h2>
+
+<div
+id="aptitudeContainer"
+class="grid">
+
+</div>
+
+</section>
+
+<!-- ===========================
+COMPANY GUIDE
+=========================== -->
+
+<section id="companies">
+
+<h2 class="section-title">
+
+🏢 Company Preparation
+
+</h2>
+
+<div
+id="companyContainer"
+class="card">
+
+<p>
+
+Select a company and analyze your interview readiness to view the preparation guide.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ===========================
+ROADMAP
+=========================== -->
+
+<section id="roadmap">
+
+<h2 class="section-title">
+
+🗺️ 30-Day Placement Roadmap
+
+</h2>
+
+<div
+id="roadmapContainer"
+class="grid">
+
+</div>
+
+</section>
+
+<!-- ===========================
+FEATURES
+=========================== -->
+
+<section>
+
+<h2 class="section-title">
+
+✨ Features
+
+</h2>
+
+<div class="grid">
+
+<div class="feature-card">
+<h3>💼 HR Interview</h3>
+<p>Practice the most frequently asked HR interview questions.</p>
+</div>
+
+<div class="feature-card">
+<h3>💻 Technical Round</h3>
+<p>Prepare HTML, CSS, JavaScript, Python, C++, SQL and DSA.</p>
+</div>
+
+<div class="feature-card">
+<h3>🧠 Aptitude</h3>
+<p>Improve quantitative, logical and verbal reasoning skills.</p>
+</div>
+
+<div class="feature-card">
+<h3>🏢 Company Guide</h3>
+<p>Learn interview processes and preparation tips for top companies.</p>
+</div>
+
+<div class="feature-card">
+<h3>📊 Progress Tracker</h3>
+<p>Track interview readiness and improve consistently.</p>
+</div>
+
+<div class="feature-card">
+<h3>📲 Installable App</h3>
+<p>Install InterviewPilot AI directly from your browser.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================
+FOOTER
+=========================== -->
+
+<footer>
+
+<h2>
+
+🚀 InterviewPilot AI
+
+</h2>
+
+<p>
+
+Master interviews with confidence using AI-inspired preparation.
+
+</p>
+
+<p>
+
+Built using HTML, CSS & JavaScript.
+
+No Backend • No API • GitHub Pages Ready
+
+</p>
+
+<p>
+
+© 2026 InterviewPilot AI. All Rights Reserved.
+
+</p>
+
+</footer>
+
+</div>
+
+<!-- ===========================
+SCRIPTS
+=========================== -->
+
+<script src="data.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
